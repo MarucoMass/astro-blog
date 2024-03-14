@@ -11,20 +11,19 @@ import '@/styles/global.css';
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Fonts Preloads -->
-    <link rel="preload" href="/fonts/Inter-Black.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-ExtraLight.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Light.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Medium.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Semibold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="/fonts/Inter-Thin.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/public/fonts/lato-latin-100-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/public/fonts/lato-latin-300-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/public/fonts/lato-latin-400-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/public/fonts/lato-latin-700-normal.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/public/fonts/lato-latin-900-normal.woff" as="font" type="font/woff" crossorigin>
+
   
 
     <title>Document</title>
 </head>
 <body>
-    <slot />
+    <main class="font-sans">
+        <slot />
+    </main>
 </body>
 </html>
