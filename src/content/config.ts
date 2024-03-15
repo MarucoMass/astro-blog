@@ -5,9 +5,9 @@ const blog = defineCollection({
     schema: z.object({
         heroImgUrl: z.string(),
         title: z.string(),
-        pubDate: z.string(),
-        tags: z.string().array()
+        pubDate: z.coerce.date(),
+        tags: z.string().array(),
     })
 })
 
-export const collection = {blog};
+export const collections = { blog };

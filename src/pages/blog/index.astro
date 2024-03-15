@@ -1,8 +1,10 @@
 ---
 import Layout from "@layout/Layout.astro";
 import { getCollection } from "astro:content";
-const posts = await getCollection("blog");
-console.log(posts);
+const posts = (await getCollection("blog")).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+console.log(typeof posts[0].data.pubDate);
 ---
 
 <Layout title="Blog">
@@ -12,10 +14,11 @@ console.log(posts);
 			<ul class="space-y-8">
 				{
 					posts.map((post) => (
+
 						<li class="border-extra-soft-white text-soft-white hover:bg-soft-light rounded-xl border transition-colors duration-200">
 							<div>
 								<article>
-									<a>
+									<a href="">
 										<img
 											src={post.data.heroImgUrl}
 											alt=""
@@ -32,14 +35,18 @@ console.log(posts);
 													{post.data.tags.map(
 														(tag: unknown) => (
 															<span class="border-extra-soft-white mt-4 self-start rounded border px-2 py-1 text-zinc-400">
-															{tag}	
+																{tag}
 															</span>
 														),
 													)}
 												</div>
-												<p class="mt-6 text-sm text-zinc-400">
-													{post.data.pubDate}
-												</p>
+												<time datetime={post.data.pubDate.toISOString()} class="mt-6 text-sm text-zinc-400">
+													{post.data.pubDate.toLocaleDateString("es-ar", {
+														year: "numeric",
+														month: "long",
+														day: "numeric"
+													})}
+												</time>
 											</div>
 										</div>
 									</a>

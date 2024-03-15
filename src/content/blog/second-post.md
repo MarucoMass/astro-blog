@@ -1,8 +1,8 @@
 ---
-title: "Pollo al disco"
-pubDate: "14 mar 2024"
 heroImgUrl: "https://generated.vusercontent.net/placeholder.svg"
-tags: ["comida", "pollo"]
+title: "Segundo post"
+pubDate: "Jul 06 2022"
+tags: ["B2B", "MARKETING"]
 ---
 
 # Hola

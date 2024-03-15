@@ -1,8 +1,8 @@
 ---
-title: "Chimichurri"
-pubDate: "14 mar 2024"
 heroImgUrl: "https://generated.vusercontent.net/placeholder.svg"
-tags: ["comida", "choripan"]
+title: "Primer post"
+pubDate: "Jul 01 2022"
+tags: ["DEV", "IA"]
 ---
 
 # Hola
