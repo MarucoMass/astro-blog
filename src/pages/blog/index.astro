@@ -2,12 +2,10 @@
 import Layout from "@layout/Layout.astro";
 import Article from "@/components/Article.astro";
 
-
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-console.log(typeof posts[0].data.pubDate);
 ---
 
 <Layout title="Blog">
@@ -17,7 +15,7 @@ console.log(typeof posts[0].data.pubDate);
 			<ul class="space-y-8">
 				{
 					posts.map((post) => (
-						<Article {...post.data}/>
+						<Article {...post.data} slug={post.slug}/>
 					))
 				}
 			</ul>
