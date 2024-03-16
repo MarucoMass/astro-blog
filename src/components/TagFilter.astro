@@ -5,14 +5,17 @@ const tags = await getAllTags();
 
 <div class="flex gap-2">
     {
-        tags.map((tag: unknown) => (
-
-            <span
-                class="border-extra-soft-white mt-4 self-start rounded border px-2 py-1 text-zinc-400"
-            >
-            {tag}
-            </span>
+        tags.map((tag) => (
+            <a href={`/blog/tag/${tag.toLowerCase()}`}>
+                <span class="border-extra-soft-white mt-4 self-start rounded border px-2 py-1 text-zinc-400">
+                    {tag}
+                </span>
+            </a>
         ))
     }
- 
+       <a href="/blog">
+        <span class="border-extra-soft-white mt-4 self-start rounded border px-2 py-1 text-zinc-400">
+            Todo
+        </span>
+    </a>
 </div>
