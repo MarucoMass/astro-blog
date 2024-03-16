@@ -2,7 +2,7 @@
 heroImgUrl: "/assets/blog-placeholder-1.jpg"
 title: "Primer post"
 pubDate: "Jul 01 2022"
-tags: ["DEV", "IA"]
+tags: ["Dev", "IA"]
 ---
 
 # An h1 header

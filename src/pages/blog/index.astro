@@ -1,6 +1,7 @@
 ---
 import Layout from "@layout/Layout.astro";
 import Article from "@/components/Article.astro";
+import TagFilter from "@/components/TagFilter.astro";
 
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
@@ -11,6 +12,7 @@ const posts = (await getCollection("blog")).sort(
 <Layout title="Blog">
 	<h1 class="">Blog</h1>
 	<div class="max-w-content-size mx-auto w-full">
+		<TagFilter />
 		<section class="mt-6 w-full">
 			<ul class="space-y-8">
 				{

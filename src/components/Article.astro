@@ -2,13 +2,14 @@
 import { Image } from "astro:assets";
 import FormattedDate from "@/components/FormattedDate.astro";
 import type { CollectionEntry } from "astro:content";
-type Props = CollectionEntry<"blog">["data"] & {slug:string};
-const { heroImgUrl, title, pubDate, tags, slug} = Astro.props;
-
+type Props = CollectionEntry<"blog">["data"] & { slug: string };
+const { heroImgUrl, title, pubDate, tags, slug } = Astro.props;
 ---
 
-<li class="border-extra-soft-white text-soft-white hover:bg-soft-light rounded-xl border transition-colors duration-200">
-    <div>
+<li
+    class="border-extra-soft-white text-soft-white hover:bg-soft-light rounded-xl border transition-colors duration-200"
+>
+    <div transition:name={title}>
         <article>
             <a href={`/blog/${slug}`}>
                 <Image
@@ -24,15 +25,15 @@ const { heroImgUrl, title, pubDate, tags, slug} = Astro.props;
                             {title}
                         </h4>
                         <div class="flex gap-2">
-                            {tags.map(
-                                (tag: unknown) => (
+                            {
+                                tags.map((tag: unknown) => (
                                     <span class="border-extra-soft-white mt-4 self-start rounded border px-2 py-1 text-zinc-400">
                                         {tag}
                                     </span>
-                                ),
-                            )}
+                                ))
+                            }
                         </div>
-                       <FormattedDate date={pubDate}/>
+                        <FormattedDate date={pubDate} />
                     </div>
                 </div>
             </a>
